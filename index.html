@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script data-ad-client="ca-pub-3314330935435112" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<link rel="stylesheet" href="style.css?id=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<title>Real Estate Investment Tools</title>
+</head>
+
+<body>
+	<h1>Real Estate Investment Tools</h1>
+
+	<p id="intro-text">Welcome to Real Estate Investment Tools. Here we provide a range of calculators and tools to help you make decisions in your real estate business.</p>
+	<hr />
+	<div class="container">
+		<div class="row">
+			<div class="col-1"></div>
+			<div class="btn-group col-10" id="button-group">
+				<button onclick="toggle('mortgage-repayments-calculator')" class="btn btn-secondary" id="mortgage-repayments-button">Mortgage Repayments Calculator</button>
+				<button onclick="toggle('rental-property-calculator')" class="btn btn-secondary" id="rental-property-button">Rental Property Calculator</button>
+				<button onclick="toggle('vacant-property-calculator')" class="btn btn-secondary">Vacant Property</button>
+				<button class="btn btn-secondary">Coming Soon</button>
+				<button class="btn btn-secondary">Coming Soon</button>
+				<button class="btn btn-secondary">Coming Soon</button>
+			</div>
+			<div class="col-1"></div>
+		</div>
+	</div>
+		
+	<div class="container">
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="col-6" id="content-container">
+				
+			</div>
+			<div class="col-3"></div>
+		</div>
+	</div>
+
+	<!-- CALCULATOR FOR MORTGAGES -->
+	<div id="mortgage-repayments-calculator" class="form-group content-box" style="display: none">
+		<h2>Mortgage Repayments Calculator</h2>
+		<p>Calculate how much the monthly repayments will be on your mortgage.</p>
+		<form id="mortgage-calculator-form" method="post">
+			<div class="form-group">
+				<label for="house-value">House Value:</label>
+				<input type="text" name="house-value" id="house-value" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="down-payment">Down Payment:</label>
+				<input type="text" name="down-payment" id="down-payment" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="mortgage-period">Mortgage Period (years):</label>
+				<input type="text" name="mortgage-period" id="mortgage-period" class="form-control"></p>
+			</div>
+			<div class="form-group">
+				<label for="interest-rate">Interest Rate (%):</label>
+				<input type="text" name="interest-rate" id="interest-rate" class="form-control">
+			</div>
+			<div class="form-group">
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="interest-only-checkbox">
+					<label class="form-check-label" for="interest-only-checkbox">Interest-only?</label>
+				</div>
+			</div>
+			<button type="submit" name="mortgage-calculator-submit" class="btn btn-primary" onclick="return mortgage_calculator()">Calculate</button>
+		</form>
+		<p id="mortgage-calculation"></p>
+	</div>
+
+
+	<!-- CALCULATOR FOR RENTAL PROPERTIES -->
+	<div id="rental-property-calculator" class="form-group content-box" style="display: none">
+		<h2>Rental Property Calculator</h2>
+		<p>Calculate how much profit you will make on a property whether it's a single or multi-family property.</p>
+		<form id="rental-calculator-form" method="post">
+
+			<div class="form-group">
+				<label for="monthly-mortgage-rental-calculator">Monthly Mortgage:</label>
+				<input type="text" name="monthly-mortgage-rental-calculator" id="monthly-mortgage-rental-calculator" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label for="number-of-units">Number Of Units:</label>
+				<input type="text" name="number-of-units" id="number-of-units" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label for="rent-per-unit">Rent Per Unit:</label>
+				<input type="text" name="rent-per-unit" id="rent-per-unit" class="form-control"></p>
+			</div>
+
+			<button type="submit" name="rental-calculator-submit" class="btn btn-primary" onclick="return rental_calculator()">Calculate</button>
+
+		</form>
+		<p id="profit-calculation">Your monthly profit would be:</p>
+	</div>
+
+
+	<!-- CALCULATOR FOR VACANT PROPERTIES -->
+	<div id="vacant-property-calculator" class="form-group content-box" style="display: none">
+		<h2>Vacant Property Calculator</h2>
+		<p>Calculate how much a property will cost you each month while it is vacant.</p>
+		<form id="vacant-calculator-form" method="post">
+
+			<div class="form-group">
+				<label for="monthly-mortgage-vacant-property">Monthly Mortgage:</label>
+				<input type="text" name="monthly-mortgage-vacant-property" id="monthly-mortgage-vacant-property" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label for="cost-of-utilities">Monthly Utilities:</label>
+				<input type="text" name="cost-of-utilities" id="cost-of-utilities" class="form-control">
+			</div>
+
+			<div class="form-group">
+				<label for="property-taxes">Property Taxes:</label>
+				<input type="text" name="property-taxes" id="property-taxes" class="form-control"></p>
+			</div>
+
+			<button type="submit" name="vacant-calculator-submit" class="btn btn-primary" onclick="return vacant_property()">Calculate</button>
+
+		</form>
+		<p id="losses-calculation">Your monthly losses would be:</p>
+	</div>
+
+<script src="script.js"></script>
+</body>
+</html>
